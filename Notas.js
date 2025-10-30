@@ -221,7 +221,7 @@ let longitudFrutas = frutas.length; // 3
 
 // Ultimo elemento del array
 
-let ultimoElemento = frutas[frutas.length - 1]; // "Cereza"
+let ultimoElemento1 = frutas[frutas.length - 1]; // "Cereza"
 
 // Metodos basicos de arrays
 
@@ -373,7 +373,7 @@ console.log(indiceEstudianteConA);
 
 // Reduce
 
-const sumaTotal = nums.reduce((acumulador, nums){;
+const sumaTotal = nums.reduce((acumulador, nums) => {
 console.log(sumaTotal);
 return acumulador + nums; // Suma cada elemento al acumulador
 }, 0); // Valor inicial del acumulador es 0
@@ -383,8 +383,28 @@ console.log(suma3);
 return acumulador + valor;
 }, 0);
 
+// Encadamiento de metodos
 
+const totalVentas = ventas
+    .filter((venta) => venta > 100) // Filtra ventas mayores a 100
+    .map((venta) => venta * 1.1) // Aplica un incremento del 10%
+    .reduce((acumulador, venta) => acumulador + venta, 0); // Suma total de ventas
 
+console.log(totalventas);
+
+// Orden de uso de metodos
+// 1. filter
+// 2. map
+// 3. reduce
+// 4. forEach (si es necesario)
+
+// Some y Every
+
+const hayNumeroMayorQueCuatro = nums.some((nums) => nums > 4);
+console.log(hayNumeroMayorQueCuatro);
+
+const todosSonMenoresQueDiez = nums.every((nums) => nums < 10);
+console.log(todosSonMenoresQueDiez);
 
 
 

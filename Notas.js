@@ -262,6 +262,93 @@ let nuevasFrutas = frutas.slice(0, 2); // Crea un nuevo array con los primeros 2
 frutas.splice(2, 0, "Melón"); // Inserta "Melón" en el índice 2 sin eliminar elementos
 
 
+/*
+Dado el array: const numeros = [10, 20, 30, 40, 50, 60];
+1. Obten el primer elemento del array.
+2. Obtene el último elemento del array.
+3. Obtene el elemento del medio del array.
+4. Modifica el tercer elemento del array por 99.
+*/
+
+//1. Obten el primer elemento del array.
+
+let primerElemento = numeros[0];
+console.log(primerElemento);
+
+//2. Obtene el último elemento del array.
+
+let ultimoElemento = numeros[numeros.length - 1];
+console.log(ultimoElemento);
+
+//3. Obtene el elemento del medio del array.
+
+let mitad = (numeros.length)/2 ;
+
+console.log(mitad);
+
+// 4. Modifica el tercer elemento del array por 99.
+
+numeros.splice(3, 1, 99);
+
+/* Metodos modernos de arrays
+
+forEach : Ejecuta una función para cada elemento del array
+map : Crea un nuevo array con los resultados de la función aplicada a cada elemento
+filter : Filtra los elementos del array que cumplen con una condición
+find : Encuentra el primer elemento que cumple con una condición
+reduce : Reduce el array a un único valor aplicando una función acumulativa
+some/every : Verifica si al menos uno o todos los elementos cumplen con una condición */
+
+const precios = [100, 200, 300, 400, 500];
+
+// ForEach
+
+console.log("Precios con Iva")
+
+precios.forEach((precio) => {
+    const precioConIva = precio * 1.21;
+    console.log(precioConIva);
+});
+
+// ForEach con index y array
+
+precios.forEach(element, index , array) => {  
+    const precioConIva = element * 1.21; 
+};
+
+const ciudades = ["Buenos Aires", "Córdoba", "Rosario", "Mendoza", "La Plata"];
+
+ciudades.forEach((ciudad, index) => {
+    console.log(`${index + 1} - ${ciudad}`);
+}   );
+
+// Map
+
+// Crea un nuevo array tranformando cada elemento
+
+const duplicado = nums.map((nums) => {
+    return nums * 2;
+});
+
+console.log(nums);
+console.log(dupicado);
+
+const cuadrados = nums.map((nums) => nums ** 2);
+console.log(cuadrados);
+
+
+//Filter: Para que de el resultado la condición debe ser verdadera
+
+const pares = nums.filter((nums) => nums % 2 === 0);
+console.log(pares);
+
+const mayoresDeTres = nums.filter((nums) => nums > 3);
+console.log(mayoresDeTres);
+
+
+
+
+
 
 
 

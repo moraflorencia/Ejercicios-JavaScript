@@ -26,30 +26,6 @@ let longitudPeliculas = peliculas.length;
 
 console.log(longitudPeliculas);
 
-/*
-Dado el array: const numeros = [10, 20, 30, 40, 50, 60];
-1. Obten el primer elemento del array.
-2. Obtene el último elemento del array.
-3. Obtene el elemento del medio del array.
-4. Modifica el tercer elemento del array por 99.
-*/
 
-//1. Obten el primer elemento del array.
 
-let primerElemento = numeros[0];
-console.log(primerElemento);
 
-//2. Obtene el último elemento del array.
-
-let ultimoElemento = numeros[numeros.length - 1];
-console.log(ultimoElemento);
-
-//3. Obtene el elemento del medio del array.
-
-let mitad = (numeros.length)/2 ;
-
-console.log(mitad);
-
-// 4. Modifica el tercer elemento del array por 99.
-
-numeros.splice(3, 1, 99);

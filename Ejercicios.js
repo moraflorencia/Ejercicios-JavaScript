@@ -1,7 +1,4 @@
 /*
-Ejercicios Básicos (Bloque 1)
-
-
 Ejercicio 1: Variables y Template Literals
 Creá variables con tu nombre, edad y ciudad. Después, creá un mensaje usando template literals que diga: "Mi nombre es [nombre], tengo [edad] años y vivo en [ciudad]".
 */
@@ -58,11 +55,8 @@ function esParOImpar(numero) {
         return "Impar";
     }
 
-//------------------------------------------------------------------------------------------------------------------------------------------------
 
 /*
-Ejercicios Intermedios (Bloque 2)
-
 Ejercicio 6: Calificación
 Creá una función que reciba una nota (0-100) y retorne:
 
@@ -74,16 +68,17 @@ Creá una función que reciba una nota (0-100) y retorne:
 */
 
 function calificacion(nota) {
+
     if (nota >= 90) {
         return "Excelente";
     }
-    else if (89 >= nota >= 75) {
+    else if (90 > nota >= 75) {
         return "Muy bien";
     }
-    else if (74 >= nota >= 60) {
+    else if (75 > nota >= 60) {
         return "Bien";
     }
-    else if (59 >= nota >= 50) {
+    else if (60 > nota >= 50) {
         return "Aprobado";
     }
     else {
@@ -180,13 +175,11 @@ function fizzBuzz() {
 }
 
 /*
-Ejercicios de Integración
-
 Ejercicio 11: Calculadora Completa
 Creá una función calculadora que reciba dos números y una operación (como string: "sumar", "restar", "multiplicar", "dividir") y retorne el resultado. Tiene que manejar el caso de división por cero.
 */
 
-function calculadora(num1, num2, operacion) {
+function calculadora (num1, num2, operacion) {
 
     let resultado = null;
 
@@ -220,5 +213,14 @@ Creá una función que reciba un string y cuente cuántas vocales tiene (a, e, i
 */
 
 function contarVocales(cadena) {
-    
+    let contador = 0;
+    let vocales = "aeiouAEIOU";
+    let i = 0;
+    for (i = 0; i < cadena.length; i++) {
+        if (vocales.indexOf(cadena[i]) !== -1) {
+            contador++;
+        }
+    }
+    return contador;
 }
+

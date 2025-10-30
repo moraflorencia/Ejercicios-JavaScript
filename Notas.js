@@ -197,6 +197,72 @@ const saludarFlechaCorta = nombre => `Hola, ${nombre}!`;  //Implicit return
 // Javascript lee primero las funciones declaradas y luego el resto del código
 
 
+//Creacion de arrays en JavaScript
+
+let frutas = ["Manzana", "Banana", "Cereza"];
+
+console.log(frutas[0]); // "Manzana"
+
+frutas.push("Naranja"); // Agrega "Naranja" al final del array
+
+console.log(frutas.length); // 4
+
+frutas.pop(); // Elimina el último elemento del array
+
+console.log(frutas.length); // 3
+
+// Modificar un elemento
+
+frutas[1] = "Mango"; // Cambia "Banana" por "Mango"
+
+//Obtener longitud del array
+
+let longitudFrutas = frutas.length; // 3
+
+// Ultimo elemento del array
+
+let ultimoElemento = frutas[frutas.length - 1]; // "Cereza"
+
+// Metodos basicos de arrays
+
+// push
+
+frutas.push("Pera"); // Agrega "Pera" al final del array
+
+// pop
+
+frutas.pop(); // Elimina el último elemento del array
+
+// shift
+
+frutas.shift(); // Elimina el primer elemento del array
+
+// unshift
+
+frutas.unshift("Fresa"); // Agrega "Fresa" al inicio del array
+
+// slice
+
+let citricos = frutas.slice(1, 3); // Crea un nuevo array con elementos desde el índice 1 hasta el 2
+
+// splice
+
+frutas.splice(1, 1, "Kiwi"); // Reemplaza 1 elemento en el índice 1 con "Kiwi"
+
+// eliminar elementos con splice
+
+frutas.splice(2, 1); // Elimina 1 elemento en el índice 2
+
+// copiar elementos con slice
+
+let nuevasFrutas = frutas.slice(0, 2); // Crea un nuevo array con los primeros 2 elementos
+
+// splice para insertar sin eliminar
+
+frutas.splice(2, 0, "Melón"); // Inserta "Melón" en el índice 2 sin eliminar elementos
+
+
+
 
 
 

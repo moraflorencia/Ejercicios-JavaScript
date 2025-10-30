@@ -345,7 +345,43 @@ console.log(pares);
 const mayoresDeTres = nums.filter((nums) => nums > 3);
 console.log(mayoresDeTres);
 
+// Filter con objetos
 
+const productos = [
+    { nombre: "Camisa", precio: 500 },
+    { nombre: "Pantalón", precio: 1200 },
+    { nombre: "Zapatos", precio: 800 },
+    { nombre: "Sombrero", precio: 300 },
+];
+const productosCaros = productos.filter((producto) => producto.precio > 700);
+console.log(productosCaros);
+
+// Find: 
+
+const numeroMayorQueTres = nums.find((nums) => nums > 3);
+console.log(numeroMayorQueTres);
+
+const estudianteConA = estudiantes.find((estudiante) => estudiante.nota === "A");
+console.log(estudianteConA);
+
+// Findex 
+
+const indiceNumeroMayorQueTres = nums.findIndex((nums) => nums > 3);
+console.log(indiceNumeroMayorQueTres);
+const indiceEstudianteConA = estudiantes.findIndex((estudiante) => estudiante.nota === "A");
+console.log(indiceEstudianteConA);
+
+// Reduce
+
+const sumaTotal = nums.reduce((acumulador, nums){;
+console.log(sumaTotal);
+return acumulador + nums; // Suma cada elemento al acumulador
+}, 0); // Valor inicial del acumulador es 0
+
+const suma3 = valores.reduce((acumulador, valor) =>{
+console.log(suma3);
+return acumulador + valor;
+}, 0);
 
 
 

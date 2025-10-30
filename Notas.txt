@@ -1,0 +1,204 @@
+
+// Variables en JavaScript: let, const y var
+
+let mensaje = "Hola Mundo!";
+console.log(mensaje); 
+
+const mensaje2 = "Hola Mundo con const!"; 
+console.log(mensaje2);
+
+var mensaje3 = "Hola Mundo con var!";
+console.log(mensaje3);
+
+function saludar() {
+    var mensaje4 = "Hola desde una función!";
+    console.log(mensaje4);
+} // Se aplica dentro y afuera de bloques
+
+function saludarLet() {
+    let mensaje5 = "Hola desde una función con let!";
+    console.log(mensaje5);
+}  // Se aplica dentro del bloque de la función
+
+
+// Tipos de datos en JavaScript
+
+/* String = string
+    Number = int, float
+    Boolean = bool
+    Undefined 
+    Null = null
+    Object = object
+    Array = array
+
+    console.log(typeof variable)  para ver el tipo de dato
+*/
+
+// Forma antigua
+
+let nombre = "Florencia"; // String
+let edad = 24;
+let mensaje1 = "Hola" + " " + nombre + ", tienes " + edad + " años.";
+
+// Forma moderna con template literals
+
+const nombre2 = "Florencia";
+const edad2 = 24;
+
+console.log(`Hola mi nombre es ${nombre2} y tengo ${edad2} años.`);
+
+// Operadores aritméticos en JavaScript
+
+let suma = 5 + 3; // 8
+let resta = 10 - 4; // 6    
+let multiplicacion = 6 * 7; // 42
+let division = 20 / 5;
+let modulo = 10 % 3; // 1
+
+// Operadores de comparación en JavaScript
+
+5 == '5'; // true
+5 === '5'; // false
+5 != '5';   // false
+5 !== '5'; // true
+5 > 3; // true 
+
+// Truthy y Falsy values
+
+/* Falsy values: false, 0, "", null, undefined, NaN
+
+   Truthy values: cualquier valor que no sea falsy
+*/
+
+//Estructuras de control en JavaScript
+
+let edad3 = 18;
+
+if (edad3 >= 18) { 
+    console.log("Eres mayor de edad.");
+}
+else if (edad3 === 18) {
+        console.log("Tienes 18 años.");
+}
+else {
+    console.log("Eres menor de edad.");
+}
+
+//Operador ternario
+
+let esMayor = (edad3 >= 18) ? "Eres mayor de edad."  : "Eres menor de edad.";
+console.log(esMayor);
+
+// Operacion ternario con else if
+
+let mensajeEdad = (edad3 > 18) ? "Eres mayor de edad." 
+                  : (edad3 === 18) ? "Tienes 18 años."
+                  : "Eres menor de edad.";
+console.log(mensajeEdad);
+
+// Switch case en JavaScript
+
+let dia = 3;        
+let nombreDia;
+
+switch (dia) {  
+    case 1:
+        nombreDia = "Lunes";
+        break;
+    case 2:
+        nombreDia = "Martes";
+        break;
+    case 3:
+        nombreDia = "Miércoles";
+        break;
+    case 4:
+        nombreDia = "Jueves";
+        break;
+    case 5:
+        nombreDia = "Viernes";
+        break;
+    case 6:
+        nombreDia = "Sábado";
+        break;
+    case 7:
+        nombreDia = "Domingo";
+        break;
+    default:
+        nombreDia = "Día inválido";
+}
+
+console.log(`El día ${dia} es ${nombreDia}.`);
+
+// Bucles en JavaScript 
+
+for (let i = 1; i <= 5; i++) {
+    console.log(`Iteración número ${i}`);
+}
+
+
+let contador = 0;
+
+while (contador < 5) {
+    console.log(`Contador es ${contador}`);
+    contador++;
+}
+
+let contador2 = 0;
+do {
+    console.log(`Contador2 es ${contador2}`);
+    contador2++;
+} while (contador2 < 5);
+
+// For con break y continue
+
+for (let i = 1; i <= 10; i++) {
+    if (i !== 6) {
+        break; // Sale del bucle cuando i es diferente de 6
+    }
+    if (i % 2 === 0) {
+        continue; // Salta la iteración cuando i es par
+    } 
+
+    console.log(`Número impar: ${i}`);
+}
+
+// Funciones en JavaScript
+
+// Declaración de función tradicional
+
+function saludar3(nombre) {
+    return `Hola, ${nombre}!`;
+}
+
+let saludo = saludar3("Florencia");
+
+// Metodos de función (expresión de función)
+
+let miNumero = 0;
+
+function incrementarEnUno(numero) {
+    miNumero = numero + 1;
+};
+
+function saludarcondefault(nombre = "Invitado") {
+    return `Hola, ${nombre}!`;
+}
+
+saludarcondefault(); // "Hola, Invitado!"
+saludarcondefault("Florencia"); // "Hola, Florencia!"
+
+// Funciones flecha (arrow functions)
+
+const saludarFlecha = (nombre) => {
+    return `Hola, ${nombre}!`;   // Explicit return
+}
+const saludarFlechaCorta = nombre => `Hola, ${nombre}!`;  //Implicit return
+
+// Javascript lee primero las funciones declaradas y luego el resto del código
+
+
+
+
+
+
+
